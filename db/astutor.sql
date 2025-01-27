@@ -60,7 +60,7 @@ CREATE TABLE `courses` (
   PRIMARY KEY (`courses_id`),
   KEY `fk_Courses_Tutors1_idx` (`tutorId`),
   CONSTRAINT `fk_Courses_Tutors1` FOREIGN KEY (`tutorId`) REFERENCES `tutors` (`tutorId`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -69,7 +69,7 @@ CREATE TABLE `courses` (
 
 LOCK TABLES `courses` WRITE;
 /*!40000 ALTER TABLE `courses` DISABLE KEYS */;
-INSERT INTO `courses` VALUES (1,1,'Computer Programming 1','Intro to Computer Programming','Computer Science','2025-01-25 16:00:51'),(2,1,'Elective 1','Into of Elective 1','Computer Science','2025-01-25 16:13:33');
+INSERT INTO `courses` VALUES (1,1,'Computer Programming 1','Intro to Computer Programming','Computer Science','2025-01-25 16:00:51'),(2,1,'Elective 1','Into of Elective 1','Computer Science','2025-01-25 16:13:33'),(3,1,'DSA','Into DSA','Computer Science','2025-01-26 20:07:45');
 /*!40000 ALTER TABLE `courses` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -91,7 +91,7 @@ CREATE TABLE `enroll` (
   KEY `fk_Enroll_Students1_idx` (`studentId`),
   CONSTRAINT `fk_Enroll_Courses1` FOREIGN KEY (`courses_id`) REFERENCES `courses` (`courses_id`),
   CONSTRAINT `fk_Enroll_Students1` FOREIGN KEY (`studentId`) REFERENCES `students` (`studentId`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -100,7 +100,7 @@ CREATE TABLE `enroll` (
 
 LOCK TABLES `enroll` WRITE;
 /*!40000 ALTER TABLE `enroll` DISABLE KEYS */;
-INSERT INTO `enroll` VALUES (3,1,1,'2025-01-25 16:10:13','Ongoing'),(4,1,2,'2025-01-25 16:13:50','Ongoing'),(5,2,1,'2025-01-25 16:14:02','Ongoing');
+INSERT INTO `enroll` VALUES (3,1,1,'2025-01-25 16:10:13','Ongoing'),(4,1,2,'2025-01-25 16:13:50','Ongoing'),(5,2,1,'2025-01-25 16:14:02','Ongoing'),(6,1,3,'2025-01-26 20:08:14','Ongoing'),(7,1,3,'2025-01-26 20:08:14','Ongoing'),(8,2,3,'2025-01-26 20:08:14','Ongoing'),(9,2,3,'2025-01-26 20:08:14','Ongoing');
 /*!40000 ALTER TABLE `enroll` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -379,4 +379,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-01-25 16:24:14
+-- Dump completed on 2025-01-27 21:35:55

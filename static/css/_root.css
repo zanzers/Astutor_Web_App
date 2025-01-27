@@ -1,6 +1,7 @@
 :root{
     --default-font-title: 'Cinzel_Decorative' ,sans-serif;
     --default-font-text:  'Inconsolata', sans-serif;
+    --bg-img: url('/static/assets/img/bg.png');
 }
 
 @font-face {
@@ -23,6 +24,8 @@
     margin: 0;
     padding: 0;
     outline: none;
+    scroll-behavior: smooth;
+    touch-action: manipulation;
 }
 
 input, 
@@ -44,225 +47,32 @@ textarea {
 
 html,
 body{
-
-    background-color: var(--astr-body-color);
     position: relative;
     font-family: var(--default-font-text);
+    width: 100%;
+    height: 100%;
     
 }
-/* Main Class Here */
 
-._root{
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-}
 
-.header{
-    background-color: var(--astr-body-color);
-    position: fixed;
-    width: 100%;
-    height: 60px;
+
+
+/* Feature 1 */
+.astr-about-us{
     top: 0;
-    z-index: 900;
-    border-bottom: 1px solid var(--astr-body-color);
-}
-
-.header_wrapper{
-    background-color: var(--astr-primary-white-color);
-    width: 100%;
-    height: 100%;   
-}
-
-.header_inner{
-    display: flex;
-    width: 1200px;
-    position: relative;
-    height: 60px;
-    margin: 0 auto;
-    align-items: center;
-}
-
-.header_left{
-    margin-right: 16px;
-}
-.header_logo{
-    display: inline-flex;
-    align-items: center;
-    cursor: pointer;
-    padding: 10px 0;
-}
-.header_tab{
-    margin: 24px;
-}
-
-.header_logo h1{
-    font-family: var(--default-font-title);
-    color: var(--astr-color-custom-purple2);
-    font-size: 24px;
-    margin-left: 50px;
-}
-
-.header_tab-wrapper{
-    display: flex;
-    flex-direction: row;
-    row-gap: 10px;
-}
-.header_name{
-    color: var(--astr-minor-font-color-new);
-    font-family: var(--default-font-text);
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    transition: all 0.3s ease-in-out;
-}
-
-.header_center{
-    width: 608px;
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-.search_bar form{
-    display: flex;
-    align-items: center;
-}
-
-.search_bar_input{
-    font-size: 14px;
-    height: 36px;
-    width: 480px;
-    background-color: var(--astr-gray-color);
-    padding-right: 20px;
-    border-radius: 24px;
-    position: relative;
-    transition-property: background-color, border-color;
-    transition-duration: 0.2s;
-    display: flex;
-    align-items: center;
-    border: 1px solid transparent;
-}
-
-.search_bar .autocomplete_label{
-    position: relative;
-    display: block;
-    flex: 1;
-}
-
-.autocomplete{
-    position: relative;
-    padding: 0;
-}
-.autocomplete_wrp{
-   display: flex;
-   align-items: center;
-   width: 100%;
-   padding-right: 14px; 
-}
-
-
-
-.search_bar input{
-    height: 20%;
-    line-height: 20px;
-    padding-left: 16px;
-}
-
-.autocomplete__input{
-    width: 100%;
-    flex-grow: 1;
-    border: none;
-    outline: none;
-    background: transparent;
-    font-weight: 500;
-    color: var(--astr-text-color);
-    letter-spacing: 2px;
-}
-
-.autocomple__clear{
-
-    display: flex;
-    width: 16px;
-    height: 16px;
-    flex-shrink: 0;
-    background: var(); 
-    background-size: cover;
-}
-
-/* header_right */
-
-
-
-
-
-/* Main Class End */
-
-
-
-
-
-/* Extention class Here*/
-
-.header_inner,
-.header_tab-wrapper,
-.header_logo {
-    cursor: pointer;
-    position: relative;
-    margin-right: 50px;
-}
-
-.header_left,
-.header_center,
-.header_rigth{
-
-    display: flex;
-    align-items: center;
-}
-
-.header_tab_active{
-    color: var(--astr-text-color-new);
-}
-
-.header_transparent{
-    border-bottom: none;
-    background-color: transparent;
-}
-
-.search_bar .autocomplete_label::before{
-    content: attr(data-before);
-}
-.search_bar .autocomplete_label::after{
-    content: attr(data-after);
-}
-
-.search_bar .autocomplete_label::before,
-.search_bar .autocomplete_label::after{
-    display: block;
+    left: 0;
     position: absolute;
-    height: 100%;
-    width: 100%;
-    box-sizing: border-box;
-    line-height: 20px;
-    padding-left: 16px;
-    color: #999;
+    background: var(--astr-style-color-quantum);
+    height: 284px;
+    padding: 20px 16px;
+    width: 336px;
+    margin-right: auto;
 }
 
 
 
-/* Extention class End*/
 
-
-
-/* Keyframes  */
-@keyframes fade-in {
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
+.astr-about-item img{
+    height: auto;
+    width: 18px;
 }

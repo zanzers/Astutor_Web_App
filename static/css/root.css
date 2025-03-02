@@ -1,0 +1,87 @@
+:root{
+
+    --default-font-title: 'Cinzel_Decorative' ,sans-serif;
+    --default-font-text:  'Inconsolata', sans-serif;
+
+    
+    --default-bg-color: #302E2D;
+    --default-content-bg-color: #F7F7F5;
+    --default-title-color: #ffcc00;
+    --default-font-color0: #EEF4F6;
+    --massage-error: rgba(231, 11, 11, 0.89);
+    --default-font-color1: #FFFFFF;
+    --unactive-color: rgba(255,255,255,0.5);
+    
+    --default-input-unactive: #EEF4F6;
+    --default-btn-active: #1E1E1E;
+
+}
+
+
+
+@font-face {
+
+    font-family: 'Inconsolata';
+    src: url('/static/font/Inconsolata/Inconsolata-VariableFont_wdth\,wght.ttf');
+}
+
+@font-face {
+
+    font-family: 'Cinzel_Decorative';
+    src: url('/static/font/Cinzel_Decorative/CinzelDecorative-Bold.ttf');
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    scroll-behavior: smooth;
+    touch-action: manipulation;
+}
+
+html,
+body{
+    display: flex;
+    position: relative;
+    background: var(--default-bg-color);
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--default-font-text);
+    
+}
+
+
+
+
+
+
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid var(--default-bg-color);
+  -webkit-text-fill-color: white;
+  transition: background-color 5000s ease-in-out 0s;
+  
+}
+
+
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

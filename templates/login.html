@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/root.css">
+    <link rel="stylesheet" href="/static/css/log-css/login.css">
+    <script src="/static/js/jquery-3.7.1.min.js"></script>
+    <script src="/static/js/login/login.js"></script>
+    <script src="/static/js/login/fetch-data.js"></script>
+    <title>Astutor</title>
+</head>
+<body>
+
+    
+    <div class="form_wrp">
+            <h1 class="ast-title">Astutor</h1>
+
+
+        <div class="form-active">
+
+           <span class="form_name">Account Log In</span>
+
+    
+        </div>
+          
+        <div class="form_container">
+
+         <form id="login-form">
+            <div class="login_wrp">
+                <div class="form_group">
+                    <input type="text" id="username" class="input_field" name="username" autocomplete="off" required>
+                    <img src="/static/asset/closed.svg" class="clear_btn">
+                    <label for="username" class="user-label">Username/Email</label>
+                    <span class="error_login"></span>
+                </div>
+
+
+                <div class="form_group">
+                    <input type="password" id="password" class="input_field" name="password" autocomplete="off" required>
+                    <img src="/static/asset/show.svg" class=" toggle_pass show_pass">
+                    <img src="/static/asset/hide.svg" class="toggle_pass hide_pass">
+                        
+                    <label for="password" class="user-label">Password</label>
+                </div>
+
+                <div class="login_links-wrp">
+                    <a class="option-btn option ">Having Promblem?</a>
+                    <a href="/api/signup" class="option-btn option">Register Now</a>
+
+                </div>
+
+                <div class="login_btn-wrp">
+                    <button type="submit" class="login_btn" disabled>Login</button>
+                </div>
+                
+
+                <span class="method_or">or</span>
+
+                <div class="method_btn-wrp">
+                    <button type="submit" class="google_btn" onclick="google()">Sign In with Google</button>
+                </div>
+
+            </div>
+         </form>
+        
+        </div>
+        
+
+    </div>
+
+</body>
+</html>

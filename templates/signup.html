@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/root.css">
+    <link rel="stylesheet" href="/static/css/log-css/sign.css">
+    <script src="/static/js/jquery-3.7.1.min.js"></script>
+    <script src="/static/js/sign/sign.js"></script> 
+    <script src="/static/js/sign/variable.js"></script> 
+    <script src="/static/js/sign/utility.js"></script> 
+    <script src="/static/js/sign/validation.js"></script>
+    <script src="/static/js/sign/sign_fecth-data.js"></script>
+    <title>Astutor</title>
+</head>
+<body>
+
+    
+    <div class="form_wrp">
+            <h1 class="ast-title">Astutor</h1>
+
+
+        <div class="form-active">
+
+           <span class="form_name">Register</span>
+
+    
+        </div>
+          
+        <div class="form_container">
+
+         <form id="login-form" autocomplete="off">
+            <div class="login_wrp">
+                <div class="form_group">
+                    <input type="text" id="username" class="input_field" name="username" autocomplete="off" required>
+                    <img src="/static/asset/closed.svg" class="clear_btn">
+                    <label for="username" class="user-label">Username/Email</label>
+                    <span class="error_sign error-username"></span>
+                </div>
+
+
+                <div class="form_group">
+                    <input type="number" id="code" class="input_field" name="code" required>
+                    <div class="sent_otp">
+                        <button id="otp_btn"  data-content="Send"></button>
+                    </div>
+                    
+                    <label for="code" class="user-label" >Verification Code</label>
+                    <span class="error_sign error-verification"></span>
+                </div>
+         
+
+                <div class="form_group">
+                    <input type="password" id="password" class="input_field" name="password" autocomplete="off" required>
+                    <img src="/static/asset/hide.svg" class="toggle_pass hide_pass">
+                    <label for="password" class="user-label">Enter password</label>
+                    <span class="error_sign password_error"></span>
+                </div>
+     
+
+                <div class="form_group">
+                    <input type="password" id="confirm_password" class="input_field" name="confirm_password" autocomplete="off" required>
+                    <img src="/static/asset/hide.svg" class="toggle_pass hide_pass">
+                    <label for="confirm_password" class="user-label">Please enter password again</label>
+                    <span class="error_sign confirm_error"></span>
+                </div>
+
+     
+
+                <div class="terms">
+                    <input type="checkbox" id="terms_checkbox" class="checkbox_field">
+                    <label for="terms_checkbox">
+                        I have read and agree to the
+                        <a href="#">Astutor Terms of Service</a>, and
+                        <a href="#">Astutor Privacy Policy</a>
+                    </label>
+                </div>
+                
+                <div class="login_btn-wrp">
+                    <button type="submit" class="register_btn"  disabled>Register</button>
+                </div>
+                <div class="login_links-wrp">
+                    <span class="login_txt">already Have an Account?</span>
+                    <a href="/api/login" class="option-btn option">Log In</a>
+                </div>
+                
+
+                <span class="method_or">or</span>
+
+                <div class="method_btn-wrp">
+                    <button type="submit" class="google_btn" onclick="google()">Sign In with Google</button>
+                </div>
+
+            </div>
+         </form>
+        
+        </div>
+        
+
+    </div>
+
+</body>
+</html>

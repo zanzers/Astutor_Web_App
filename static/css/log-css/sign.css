@@ -1,0 +1,357 @@
+.form_wrp{
+    width: 540px;
+    height: 550px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background: transparent;
+}
+
+.ast-title{
+    position: absolute;
+    top: 0;
+    color: var(--default-title-color);
+    letter-spacing: 15px;
+    font-family: var(--default-font-title);
+    font-size: 30px;
+    padding: 5px;
+
+}
+
+
+.form-active{
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    top: 54px;
+    position: absolute;
+
+}
+
+.form_name{
+    font-size: 16px;
+    color: var( --default-font-color1);
+    padding: 10px;
+    font-family: var(--default-font-text);
+    letter-spacing: 3px;
+}
+
+
+.form_container {
+    width: 304px;
+    height: 426px;
+    /* background: red; */
+    top: 100px;
+    position: absolute;
+}
+
+.login_wrp {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+   
+}
+
+.form_group {
+    position: relative;
+}
+
+.input_field {
+    width: 310px;
+    height: 45px;
+    border: solid 1.5px var(--unactive-color) !important;
+    border-radius: 10px;
+    background: none;
+    padding: 1rem;
+    font-size: 1rem;
+    color: var(--default-font-color0);
+    transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+    background-color: transparent; 
+    cursor: text;
+}
+
+.user-label {
+    font-family: var(--default-font-text);
+    position: absolute;
+    left: 15px;
+    color: #e8e8e8;
+    pointer-events: none;
+    transform: translateY(1rem);
+    transition: 150ms cubic-bezier(0.4,0,0.2,1);
+    letter-spacing: 1px;
+}
+
+.input_field:focus, 
+.input_field:valid {
+    outline: none;
+    border: 1.5px solid #EEF4F6;
+}
+
+.input_field:focus ~ .user-label, 
+.input_field:valid ~ .user-label {
+    transform: translateY(-50%) scale(0.8);
+    background-color: #302E2D;
+    padding: 0 .1em;
+    color: var(--default-title-color);
+}
+
+.login_links-wrp{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.option-btn{
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.option{
+    color: var(--default-title-color);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: text-decoration 0.3s ease-in-out;
+}
+.login_txt{
+    font-size: 14px;
+    color: var(--default-font-color0);
+    margin: 5px;
+}
+
+.option:hover{
+    text-decoration: underline;
+}
+
+.login_btn-wrp {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.register_btn {
+    width: 100%;
+    height: 45px;
+    border: 1px solid var(--default-input-unactive);
+    border-radius: 10px;
+    background: transparent;
+    color: var(--unactive-color);
+    cursor: not-allowed; 
+    letter-spacing: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.enabled {
+    background: var(--default-input-active);
+    color: var(--default-font-color0);
+    cursor: pointer;
+}
+
+.register_btn.enabled:hover {
+    background: var(--default-btn-active); 
+}
+
+.method_btn-wrp {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2px;
+    margin-bottom: 30px;
+}
+
+.google_btn {
+    width: 100%;
+    height: 45px;
+    border-radius: 10px;
+    background: var(--default-font-color0);
+    color: #333; 
+    border: 1px solid #ccc;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+
+.google_btn:hover {
+    background: var(---default-font-color0);
+    color: var(--default-title-color);
+ 
+}
+
+.google_btn::before {
+    content: "";
+    background: url('/static/asset/Google.svg') no-repeat center center;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.method_or{
+    color: var(--unactive-color);
+    font-size: 14px;
+}
+
+
+.clear_btn {
+    position: absolute;
+    right: 15px;
+    top: 50% !important;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: none; 
+}
+
+.adjust_clr{
+    top: 16px !important;
+}
+
+.toggle_pass {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+}
+
+.hide_pass{
+    display: none;
+}
+
+
+.error_sign{
+    position: absolute;
+    width: 100%;
+    height: 16px;
+    line-height: 16px;
+    color: var(--massage-error);
+    font-size: 12px;
+    font-weight: 400;
+    left: 16px;
+    top: 48px;
+    margin-bottom: 5px;
+
+}
+
+
+.sent_otp{
+    position: absolute;
+    right:5px;
+    display: flex;
+    top: 5px;
+    align-items: center;
+    margin: 5px;
+    overflow: hidden;
+
+}
+
+#otp_btn{
+    background: none;
+    border: none;
+    color: var(--default-title-color) !important;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 5px;
+    position: relative;
+    border-left: 1px solid var(--unactive-color);
+    
+}
+
+#otp_btn::before{
+    content: attr(data-content);
+    margin-left: 5px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+#otp_btn:disabled::before {
+    color: var(--unactive-color) !important;
+    cursor: not-allowed;
+}
+
+
+.terms {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 12px;
+    color: white;
+    max-width: 400px;
+    line-height: 1.4;
+    margin-top: 10px;
+}
+
+.terms input[type="checkbox"] {
+    appearance: none;
+    width: 16px;
+    height: 14px;
+    border: 2px solid white;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    border-radius: 25%;
+}
+
+.terms input[type="checkbox"]:checked {
+    background-color: white;
+}
+
+.terms input[type="checkbox"]::before {
+    content: "✔";
+    font-size: 12px;
+    color: black;
+    display: none;
+}
+
+.terms input[type="checkbox"]:checked::before {
+    display: block;
+}
+
+.terms a {
+    color: var(--default-title-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+.error-border {
+    border: 1px solid red !important;
+    margin-bottom: 26px;
+
+}
+.error-border-user {
+    border: 1px solid red !important;
+    margin-bottom:8px;
+    
+
+}
+
+/* .form_group:nth-of-type(3).has-error{
+    margin-bottom: 8px;
+} */

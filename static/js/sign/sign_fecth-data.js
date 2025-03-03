@@ -14,7 +14,9 @@ function submitForm(){
             password: password
         }),
         success: function(response){
+            
             alert("Success")
+            console.log("Server Response:", response); 
         },
         error: function(xhr){
            

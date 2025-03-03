@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, jsonify, redirect, url_for, session
 from public.library_login.login import login_student
-
+from public.library_signIn.sign import sign_student
 
 app = Flask(__name__)
 
@@ -16,7 +16,6 @@ def login():
             print("Response by login_student-200:", response_json, status_code)
             return response, status_code
 
-        
         print("Response by login_student:", response_json, status_code)
         return response, status_code
 
@@ -25,14 +24,12 @@ def login():
 
 
 
-
-
-
 @app.route('/api/signup', methods=['GET', 'POST'])
 def signIn():
 
-    
-
+    if request.method == 'POST':
+         result = sign_student() 
+         print("Result by sign",result)
     return render_template('signup.html')
 
 

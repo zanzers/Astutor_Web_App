@@ -5,6 +5,6 @@ $(document).ready(function(){
     $password.on("input", validatePassword);
     $confirmPassword.on("input", validateConfirmPassword);
     $termsCheckbox.on("click", validateTerms);
-    $registerBtn.on("click", submitForm);
+    // $registerBtn.on("click", submitForm);
 
 });

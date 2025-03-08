@@ -23,7 +23,7 @@ def login_student():
                 "success": False,
                 }), HTTPStatus.BAD_REQUEST
 
-        query = """SELECT id, username, password FROM student WHERE username = %s"""
+        query = """SELECT id, username, password FROM USER WHERE username = %s"""
         print(f"Executing query: {query} with username={username}")
         result = db_read(query, (username,))
 
